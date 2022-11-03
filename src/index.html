@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CookIt | Food and recipe inspiration</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">CookIt</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center pe-5 me-4" id="navbarNav">
+          <ul class="navbar-nav gap-4">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#main">Search</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header>
+      <div class="hero">
+        <h1>FOOD</h1>
+        <h1>RECIPES</h1>
+        <div class="signature">
+          <div class="round1">
+            <div class="round2">
+              <div class="img-signature"></div>
+            </div>
+          </div>
+          <div class="recipes-signature">
+            <p class="recipes-title">Trending Recipes</p>
+            <div class="recipes-detail">
+              <div>
+                <h5>Pancakes :</h5>
+                <ul>
+                  <li>Flour</li>
+                  <li>Eggs</li>
+                  <li>Milk</li>
+                  <li>Sunflower Oil</li>
+                  <li>Sugar</li>
+                  <li>Raspberries</li>
+                  <li>Blueberries</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter">
+        <h4>Search by</h4>
+        <div class="group-button">
+          <div class="bt">
+            <button type="button" class="bt-category">Categories</button>
+          </div>
+          <div class="bt">
+            <button type="button" class="bt-area">Area</button>
+          </div>
+          <div class="bt">
+            <button type="button" class="bt-ingrediens">Ingrediens</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="recipes">
+        <h1>+285</h1>
+        <h3>Food Recipes</h3>
+        <h5>All around the world</h5>
+      </div>
+      <div class="ingrediens">
+        <h1>+574</h1>
+        <h3>Many Ingrediens</h3>
+        <h5>With various spices</h5>
+      </div>
+    </header>
+
+    <main class="container-lg" id="main">
+      <div class="mt-1 mb-4 mt-md-5">
+        <h1 class="main-title">LET'S FIND SOMETHING</h1>
+        <h1 class="main-title">TASTY FOR YOU</h1>
+      </div>
+      <search-bar></search-bar>
+      <meal-list></meal-list>
+    </main>
+
+    <section class="details mb-5">
+      <div class="d-flex align-items-center">
+        <div class="container">
+          <div class="row detailRecipes">
+            <div class="col-12 col-md-5">
+              <back-button></back-button>
+              <p class="filterBy fs-md-3"></p>
+              <h1 class="titleRecipes"></h1>
+            </div>
+            <div class="col-12 col-md-6 mb-2 imgRecipes">
+              <img src="" id="detailImage" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container mt-5">
+        <div class="row">
+          <div class="col-12 col-md-4 mb-4">
+            <h3>Ingredients</h3>
+            <hr />
+            <div class="bgDetail px-3 py-3">
+              <div>
+                <ul class="ingredientsDetail"></ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-8 mb-4">
+            <h3>Method</h3>
+            <hr />
+            <div class="bgDetail px-3 py-3">
+              <div>
+                <ol class="methods"></ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+  <br />
+</html>
