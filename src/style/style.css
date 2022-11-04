@@ -144,7 +144,6 @@ header {
   height: 59px;
   border: 2.5px solid #000;
   color: #000;
-  cursor: pointer;
   transition: transform 0.3s;
 }
 

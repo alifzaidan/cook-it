@@ -3,6 +3,15 @@ class backButton extends HTMLElement {
     this.render();
   }
 
+  switchPage() {
+    const header = document.querySelector('header');
+    const main = document.querySelector('main');
+    const details = document.querySelector('.details');
+    main.style.display = 'block';
+    header.style.display = 'grid';
+    details.style.display = 'none';
+  }
+
   render() {
     this.innerHTML = `
     <style>
@@ -33,17 +42,39 @@ class backButton extends HTMLElement {
       </div>
     `;
 
+    const renderResult = () => {
+      this.switchPage();
+
+      const detailTitle = document.querySelector('#detailTitle');
+
+      const filterBy = document.querySelector('.filterBy');
+      filterBy.remove();
+
+      const filterByNew = document.createElement('p');
+      filterByNew.className = 'filterBy fs-md-3';
+      detailTitle.appendChild(filterByNew);
+
+      const titleRecipes = document.querySelector('.titleRecipes');
+      titleRecipes.remove();
+
+      const titleRecipesNew = document.createElement('h1');
+      titleRecipesNew.className = 'titleRecipes';
+      detailTitle.appendChild(titleRecipesNew);
+
+      const ingredients = document.querySelector('.ingredientsDetail');
+      while (ingredients.hasChildNodes()) {
+        ingredients.removeChild(ingredients.firstChild);
+      }
+
+      const methods = document.querySelector('.methods');
+      while (methods.hasChildNodes()) {
+        methods.removeChild(methods.firstChild);
+      }
+    };
+
     const backToLanding = document.querySelector('#backToLanding');
     backToLanding.addEventListener('click', function () {
-      const header = document.querySelector('header');
-      const main = document.querySelector('main');
-      const details = document.querySelector('.details');
-      main.style.display = 'block';
-      header.style.display = 'grid';
-      details.style.display = 'hide';
-      console.log(main);
-      console.log(header);
-      console.log(details);
+      renderResult();
     });
   }
 }
